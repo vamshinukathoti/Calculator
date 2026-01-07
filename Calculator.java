@@ -51,6 +51,7 @@ public class Calculator {
     if (choice == 5) {
       running = false;
       System.out.println("Thankyou"); 
+      break;
     }
     switch (choice) {
       case 1 -> System.out.println(res + add(a, b));
