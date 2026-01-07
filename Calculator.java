@@ -3,19 +3,19 @@ import java.util.Scanner;
 
 public class Calculator {
 
-  public static int add (int a,int b){
+  public static double add (double a,double b){
     return a+b;
   }
 
-  public static int sub (int a ,int b){
+  public static double sub (double a ,double b){
     return a-b;
   }
 
-  public static int mul(int a,int b){
+  public static double mul(double a,double b){
     return a*b;
   }
 
-  public static  int div (int a,int b){
+  public static  double div (double a,double b){
     if(a  == 0 || b == 0){
       System.out.println("Can't be Divided by zero(0)");
       return 0;
@@ -32,8 +32,8 @@ public class Calculator {
     Scanner sc = new Scanner(System.in);
     System.out.println("Calculator");
     System.out.println("Enter the values of a and b");
-    int a = sc.nextInt();
-    int b = sc.nextInt();
+    double a = sc.nextDouble();
+    double b = sc.nextDouble();
     System.out.println("""
         Please enter your choice :
         1. Addition
