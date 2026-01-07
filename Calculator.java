@@ -16,7 +16,7 @@ public class Calculator {
   }
 
   public static  double div (double a,double b){
-    if(a  == 0 || b == 0){
+    if( b == 0){
       System.out.println("Can't be Divided by zero(0)");
       return 0;
     }
@@ -31,6 +31,10 @@ public class Calculator {
 
     Scanner sc = new Scanner(System.in);
     String res = "Result :";
+    boolean running = true;
+    while (running) {
+      
+    
     System.out.println("Calculator");
     System.out.println("Enter the values of a and b");
     double a = sc.nextDouble();
@@ -41,15 +45,23 @@ public class Calculator {
         2. Substraction
         3. Multiplication
         4. Division
+        5. Exit
         """);
     int choice = sc.nextInt();
+    if (choice == 5) {
+      running = false;
+      System.out.println("Thankyou"); 
+    }
     switch (choice) {
       case 1 -> System.out.println(res + add(a, b));
       case 2 -> System.out.println(res + sub(a,b));
       case 3 -> System.out.println(res + mul(a, b));
       case 4 -> System.out.println(res + div(a, b));
-      default -> System.out.println("Error"+ choice+ "Invalid chooice ,Try again 1");
+      
+      
     }
+
+   }
 
     sc.close();
 
