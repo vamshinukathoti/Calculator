@@ -30,6 +30,7 @@ public class Calculator {
   public static void main(String[] args) {
 
     Scanner sc = new Scanner(System.in);
+    String res = "Result :";
     System.out.println("Calculator");
     System.out.println("Enter the values of a and b");
     double a = sc.nextDouble();
@@ -43,10 +44,10 @@ public class Calculator {
         """);
     int choice = sc.nextInt();
     switch (choice) {
-      case 1 -> System.out.println("result :" + add(a, b));
-      case 2 -> System.out.println("Result :" + sub(a,b));
-      case 3 -> System.out.println("Result :" + mul(a, b));
-      case 4 -> System.out.println("Result:" + div(a, b));
+      case 1 -> System.out.println(res + add(a, b));
+      case 2 -> System.out.println(res + sub(a,b));
+      case 3 -> System.out.println(res + mul(a, b));
+      case 4 -> System.out.println(res + div(a, b));
       default -> System.out.println("Error"+ choice+ "Invalid chooice ,Try again 1");
     }
 
